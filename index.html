@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="style.css">
+    <title>Bingo Game</title>
+</head>
+
+<center>ENTER HOW MANY BINGO CARDS</center>
+
+<center> 
+    <br>
+    <input type="text" id="txtNumberOfCards" placeholder="Number of cards to generate."><br><br>
+
+    <button onclick="callDrawCard()"> GENERATE CARD/S</button>
+    <button onclick="callDrawBall()"> DRAW BALL</button>
+    <button onclick="callClearBingoCard()"> CLEAR</button> 
+    
+    <p id = "pOutput"></p> 
+    <p id = "pBallOutput"></p>   
+</center>
+
+<body>
+    <script src = "BingoCard.js"></script>
+    <script src = "BallDraw.js"></script>
+    
+    <script >
+
+        let objBingoCard = new BingoCard();
+        let objBallDraw = new BallDraw();
+
+       function callDrawCard(){
+
+            objBingoCard.drawCard();
+            
+       }
+
+       function callDrawBall(){
+
+            objBallDraw.drawBall();
+
+       }
+
+       function callClearBingoCard(){
+
+        objBingoCard.clearBingoCard ();
+
+        }
+        
+
+    </script>
+    
+</body>
+</html>
